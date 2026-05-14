@@ -18,8 +18,8 @@ target/
 "StudentDATA/"
 "Unit Testing Stubs/"
 
-# Negate Simple Calculator so we can track it
-!"Simple Calculator/"
-!"Simple Calculator/.project"
-!"Simple Calculator/.classpath"
-!"Simple Calculator/.settings/"
+# Negate MVP Calculator
+!"MVP Calculator/"
+!"MVP Calculator/.project"
+!"MVP Calculator/.classpath"
+!"MVP Calculator/.settings/"
