@@ -19,19 +19,36 @@ public class Calculator extends Frame implements ActionListener {
 
     public Calculator() {
         txt1 = new TextField(10);
-        addBtn = new Button("+");
-        subBtn = new Button("-");
-        mulBtn = new Button("*");
-        divBtn = new Button("/");
-        powBtn = new Button("^");
-        negBtn = new Button("+/-");
-        factBtn = new Button("!");
-        clearBtn = new Button("C");
-        equalsBtn = new Button("=");
+        addBtn = new Button("+"); addBtn.setActionCommand("add");
+        subBtn = new Button("-"); subBtn.setActionCommand("subtract");
+        mulBtn = new Button("*"); mulBtn.setActionCommand("multiply");
+        divBtn = new Button("/"); divBtn.setActionCommand("divide");
+        powBtn = new Button("^"); powBtn.setActionCommand("power");
+        negBtn = new Button("+/-"); negBtn.setActionCommand("negate");
+        factBtn = new Button("!"); factBtn.setActionCommand("factorial");
+        clearBtn = new Button("C"); clearBtn.setActionCommand("clear");
+        equalsBtn = new Button("="); equalsBtn.setActionCommand("equals");
+        
         digitBtns = new Button[10];
         for (int i = 0; i <= 9; i++) {
             digitBtns[i] = new Button(String.valueOf(i));
+            digitBtns[i].setActionCommand(String.valueOf(i));
+            digitBtns[i].addActionListener(this);
         }
+
+        this.setSize(300, 300);
+        this.setLayout(new FlowLayout());
+        this.add(txt1);
+        for (int i = 0; i <= 9; i++) this.add(digitBtns[i]);
+        this.add(addBtn); this.add(subBtn); this.add(mulBtn); this.add(divBtn);
+        this.add(powBtn); this.add(negBtn); this.add(factBtn); this.add(clearBtn);
+        this.add(equalsBtn);
+
+        addBtn.addActionListener(this); subBtn.addActionListener(this);
+        mulBtn.addActionListener(this); divBtn.addActionListener(this);
+        powBtn.addActionListener(this); negBtn.addActionListener(this);
+        factBtn.addActionListener(this); clearBtn.addActionListener(this);
+        equalsBtn.addActionListener(this);
     }
 
     public static void main(String[] args) {
@@ -41,5 +58,9 @@ public class Calculator extends Frame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String cmd = e.getActionCommand();
+        if (cmd.length() == 1 && Character.isDigit(cmd.charAt(0))) {
+            txt1.setText(txt1.getText() + cmd);
+        }
     }
 }
