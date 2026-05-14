@@ -1,0 +1,25 @@
+# Build artifacts
+bin/
+target/
+*.class
+
+# Eclipse/IDE metadata
+.settings/
+.classpath
+.project
+
+# Other folders (to be added day by day)
+"Abstract Factory Pattern/"
+"Library Management Layered/"
+"Library System/"
+"MVP Calculator/"
+"Maven Calculator/"
+"Student CGPA Layered/"
+"StudentDATA/"
+"Unit Testing Stubs/"
+
+# Negate Simple Calculator so we can track it
+!"Simple Calculator/"
+!"Simple Calculator/.project"
+!"Simple Calculator/.classpath"
+!"Simple Calculator/.settings/"
