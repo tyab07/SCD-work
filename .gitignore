@@ -22,3 +22,9 @@ target/
 !"MVP Calculator/.project"
 !"MVP Calculator/.classpath"
 !"MVP Calculator/.settings/"
+
+# Negate Maven Calculator
+!"Maven Calculator/"
+!"Maven Calculator/.project"
+!"Maven Calculator/.classpath"
+!"Maven Calculator/.settings/"
