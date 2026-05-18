@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.calculator.CalculatorController" 
+      style="-fx-background-color: #2b2b2b; -fx-padding: 15;">
+    
+    <TextField fx:id="display" editable="false" alignment="CENTER_RIGHT" 
+               style="-fx-font-size: 32px; -fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-border-color: #404040; -fx-border-width: 2; -fx-padding: 10;">
+        <VBox.margin>
+            <Insets bottom="15.0" />
+        </VBox.margin>
+    </TextField>
+    
+    <GridPane hgap="8" vgap="8">
+        <!-- Row 0: Memory/Function buttons -->
+        <Button text="PCT" onAction="#handlePercentButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 16px; -fx-background-color: #404040; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button text="CE" onAction="#handleClearEntryButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 18px; -fx-background-color: #404040; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button text="C" onAction="#handleClearButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 18px; -fx-background-color: #d95035; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button text="DEL" onAction="#handleBackspaceButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 16px; -fx-background-color: #404040; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        
+        <!-- Row 1: Advanced functions -->
+        <Button text="1/x" onAction="#handleReciprocalButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 16px; -fx-background-color: #404040; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button text="SQR" onAction="#handleSquareButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 16px; -fx-background-color: #404040; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button text="SQRT" onAction="#handleSquareRootButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 16px; -fx-background-color: #404040; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button text="/" onAction="#handleOperatorButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #505050; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        
+        <!-- Row 2: 7, 8, 9, * -->
+        <Button text="7" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button text="8" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button text="9" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button text="*" onAction="#handleOperatorButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #505050; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        
+        <!-- Row 3: 4, 5, 6, - -->
+        <Button text="4" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Button text="5" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button text="6" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Button text="-" onAction="#handleOperatorButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #505050; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        
+        <!-- Row 4: 1, 2, 3, + -->
+        <Button text="1" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Button text="2" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button text="3" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Button text="+" onAction="#handleOperatorButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #505050; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        
+        <!-- Row 5: +/-, 0, ., = -->
+        <Button text="+/-" onAction="#handleSignButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 18px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Button text="0" onAction="#handleNumberButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Button text="." onAction="#handleDecimalButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="2" GridPane.rowIndex="5" />
+        <Button text="=" onAction="#handleEqualsButton" prefWidth="85" prefHeight="60" 
+                style="-fx-font-size: 24px; -fx-background-color: #0078d4; -fx-text-fill: white; -fx-background-radius: 5;" 
+                GridPane.columnIndex="3" GridPane.rowIndex="5" />
+        
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+</VBox>
