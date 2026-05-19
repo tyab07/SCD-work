@@ -8,23 +8,13 @@ target/
 .classpath
 .project
 
-# Other folders (to be added day by day)
-"Abstract Factory Pattern/"
-"Library Management Layered/"
-"MVP Calculator/"
-"Maven Calculator/"
-"Student CGPA Layered/"
-"StudentDATA/"
-"Unit Testing Stubs/"
-
-# Negate MVP Calculator
-!"MVP Calculator/"
-!"MVP Calculator/.project"
-!"MVP Calculator/.classpath"
-!"MVP Calculator/.settings/"
-
-# Negate Maven Calculator
-!"Maven Calculator/"
-!"Maven Calculator/.project"
-!"Maven Calculator/.classpath"
-!"Maven Calculator/.settings/"
+# Folder management (keep project folders)
+!Abstract Factory Pattern/
+!Library Management Layered/
+!Library System/
+!MVP Calculator/
+!Maven Calculator/
+!Simple Calculator/
+!Student CGPA Layered/
+!StudentDATA/
+!Unit Testing Stubs/
