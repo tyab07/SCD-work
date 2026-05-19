@@ -1,5 +1,10 @@
 package layered;
 
+/**
+ * Main application class for the Student CGPA Calculator.
+ * This class handles the GUI and user interactions.
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
