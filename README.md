@@ -33,6 +33,11 @@ mvn clean install
 gradle build
 ```
 
+3. Run the application:
+```bash
+java -jar target/scd-work.jar
+```
+
 ## Project Structure
 
 ```
@@ -42,6 +47,13 @@ src/
 └── test/
     └── java/
 ```
+
+## Features
+
+- Object-Oriented Design patterns
+- Software Engineering best practices
+- Unit testing with JUnit
+- Documentation and code comments
 
 ## Usage
 
