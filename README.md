@@ -57,7 +57,17 @@ src/
 
 ## Usage
 
-Detailed instructions on how to run the project will be added as development progresses.
+This project demonstrates key software engineering principles and design patterns. Each module contains:
+- Implementation examples
+- Test cases
+- Comprehensive documentation
+
+To compile and test:
+```bash
+mvn test
+# or
+gradle test
+```
 
 ## Contributing
 
@@ -73,3 +83,7 @@ This project is part of coursework. See LICENSE file for more details.
 ## Author
 
 Created by tyab07
+
+## Support
+
+For issues or questions, please open an issue in the repository.
