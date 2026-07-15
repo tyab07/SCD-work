@@ -5,7 +5,7 @@ This is a Java-based project for Software Engineering coursework.
 ## Project Overview
 
 This repository contains various Java implementations and exercises for Software Engineering Design (SCD) coursework.
-
+ 
 ## Technology Stack
 
 - **Language**: Java
